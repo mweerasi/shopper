@@ -2,12 +2,14 @@ class OrderItem < ActiveRecord::Base
   belongs_to :product
   belongs_to :order
 
+  # Check if value is an integer > 0
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validate :product_present
   validate :order_present
 
   before_save :finalize
 
+  # Keep price the same once added to cart
   def unit_price
     if persisted?
       self[:unit_price]

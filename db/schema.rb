@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_021328) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.integer "quantity"
+    t.integer "inventory_count"
     t.decimal "price", precision: 12, scale: 3
     t.boolean "active"
     t.datetime "created_at", null: false

@@ -15,4 +15,6 @@
   <% @order_items.each do |order_item| %>
     <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
   <% end %>
+  <h4 class="text-right">Total Price: <span style="color: green"><%= number_to_currency current_order.subtotal %></span></h4>
+  <h3 class="text-right"><%= link_to "Purchase", carts_purchase_path(@order_items), { data: { confirm: "Are you sure you wish to purchase these products?" }, method: :post, remote: true, class: "btn btn-danger" } %></h3>
 <% end %>

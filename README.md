@@ -1,6 +1,6 @@
 # Shopper
 
-Shopper is a Ruby project created for the purpose of learning Rails and also as a project for Shopify's Backend Intern application.
+Shopper is a Ruby project created for the purpose of learning Rails.
 
 ## Setup
 
